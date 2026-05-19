@@ -1,0 +1,98 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --bg: #f8f9fc;
+    --card: #ffffff;
+    --border: #e5e7eb;
+    --muted: #6b7280;
+  }
+
+  .dark {
+    --bg: #0d0f14;
+    --card: #161a23;
+    --border: #1f2535;
+    --muted: #8b95a8;
+  }
+
+  * {
+    border-color: var(--border);
+  }
+
+  body {
+    @apply bg-[var(--bg)] text-gray-900 dark:text-gray-100 font-sans antialiased;
+    transition: background-color 0.2s ease;
+  }
+
+  input,
+  textarea,
+  select {
+    @apply outline-none;
+  }
+}
+
+@layer components {
+  .card {
+    @apply bg-[var(--card)] border border-[var(--border)] rounded-xl shadow-sm;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center gap-2 px-4 py-2 bg-brand-600 hover:bg-brand-700 text-white font-medium rounded-lg transition-all duration-150 disabled:opacity-50 disabled:cursor-not-allowed text-sm;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center gap-2 px-4 py-2 bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 text-gray-700 dark:text-gray-300 font-medium rounded-lg transition-all duration-150 text-sm;
+  }
+
+  .btn-danger {
+    @apply inline-flex items-center gap-2 px-4 py-2 bg-red-500 hover:bg-red-600 text-white font-medium rounded-lg transition-all duration-150 text-sm;
+  }
+
+  .input {
+    @apply w-full px-3 py-2 bg-gray-50 dark:bg-gray-900 border border-[var(--border)] rounded-lg text-sm placeholder-gray-400 dark:placeholder-gray-500 focus:ring-2 focus:ring-brand-500/30 focus:border-brand-500 transition-all;
+  }
+
+  .label {
+    @apply block text-xs font-medium text-gray-600 dark:text-gray-400 mb-1.5 uppercase tracking-wide;
+  }
+
+  .badge-new {
+    @apply inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium bg-blue-100 dark:bg-blue-900/40 text-blue-700 dark:text-blue-300;
+  }
+  .badge-contacted {
+    @apply inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium bg-yellow-100 dark:bg-yellow-900/40 text-yellow-700 dark:text-yellow-300;
+  }
+  .badge-qualified {
+    @apply inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium bg-green-100 dark:bg-green-900/40 text-green-700 dark:text-green-300;
+  }
+  .badge-lost {
+    @apply inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium bg-red-100 dark:bg-red-900/40 text-red-600 dark:text-red-400;
+  }
+
+  .badge-website {
+    @apply inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium bg-purple-100 dark:bg-purple-900/40 text-purple-700 dark:text-purple-300;
+  }
+  .badge-instagram {
+    @apply inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium bg-pink-100 dark:bg-pink-900/40 text-pink-700 dark:text-pink-300;
+  }
+  .badge-referral {
+    @apply inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium bg-orange-100 dark:bg-orange-900/40 text-orange-700 dark:text-orange-300;
+  }
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  @apply bg-transparent;
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-gray-300 dark:bg-gray-700 rounded-full;
+}
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-gray-400 dark:bg-gray-600;
+}
