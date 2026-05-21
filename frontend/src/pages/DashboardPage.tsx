@@ -13,7 +13,7 @@ interface StatCardProps {
 
 function StatCard({ label, value, icon: Icon, color, iconBg }: StatCardProps) {
   return (
-    <div className="card p-5 animate-slide-up">
+    <div className="card p-4 md:p-5 animate-slide-up">
       <div className="flex items-center justify-between mb-3">
         <span className="text-xs font-medium text-[var(--muted)] uppercase tracking-wide">{label}</span>
         <div className={`w-8 h-8 rounded-lg ${iconBg} flex items-center justify-center`}>
@@ -44,7 +44,7 @@ export function DashboardPage() {
       {/* Header */}
       <div className="flex items-center justify-between">
         <div>
-          <h1 className="text-xl font-semibold text-gray-900 dark:text-white">
+          <h1 className="md:text-xl text-lg font-semibold text-gray-900 dark:text-white">
             Good {getGreeting()}, {user?.name?.split(' ')[0]} 👋
           </h1>
           <p className="text-sm text-[var(--muted)] mt-0.5">Here's your leads overview</p>
