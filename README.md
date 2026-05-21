@@ -6,6 +6,11 @@ A full-stack **Lead Management Dashboard** built with the MERN stack and TypeScr
 
 ---
 
+## Live
+https://gigflow-smart-leads-dashboard-frontend.onrender.com
+
+---
+
 ## Features
 
 ### Authentication & Authorization
