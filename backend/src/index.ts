@@ -55,7 +55,7 @@ app.use(errorHandler);
 const start = async (): Promise<void> => {
   await connectDB();
   app.listen(config.port, () => {
-    console.log(`🚀 GigFlow server running on http://localhost:${config.port}`);
+    console.log(` GigFlow server running on http://localhost:${config.port}`);
     console.log(`📋 Environment: ${config.nodeEnv}`);
   });
 };
